@@ -19,12 +19,12 @@ gen:
         "RuleApi" \
         "UcciApi" \
         "UtilApi" \
+        --wasm \
 
     # --dart-decl-output lib/bridge_definitions.dart \
 
     #
     # --inline-rust \
-    # --wasm \
 
 
 lint:

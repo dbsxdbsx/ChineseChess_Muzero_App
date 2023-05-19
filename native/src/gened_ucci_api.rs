@@ -168,6 +168,13 @@ support::lazy_static! {
     pub static ref FLUTTER_RUST_BRIDGE_HANDLER: support::DefaultHandler = Default::default();
 }
 
+/// cbindgen:ignore
+#[cfg(target_family = "wasm")]
+#[path = "gened_ucci_api.web.rs"]
+mod web;
+#[cfg(target_family = "wasm")]
+pub use web::*;
+
 #[cfg(not(target_family = "wasm"))]
 #[path = "gened_ucci_api.io.rs"]
 mod io;

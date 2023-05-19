@@ -57,6 +57,13 @@ impl Wire2Api<u8> for u8 {
 
 /* nothing since executor detected */
 
+/// cbindgen:ignore
+#[cfg(target_family = "wasm")]
+#[path = "bridge_generated_shares.web.rs"]
+mod web;
+#[cfg(target_family = "wasm")]
+pub use web::*;
+
 #[cfg(not(target_family = "wasm"))]
 #[path = "bridge_generated_shares.io.rs"]
 mod io;

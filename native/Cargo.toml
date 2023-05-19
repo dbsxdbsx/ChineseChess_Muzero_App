@@ -19,7 +19,7 @@ opt-level = 3
 
 [dependencies]
 anyhow              = "1"
-flutter_rust_bridge = "1"
+flutter_rust_bridge = { git = "https://github.com/dbsxdbsx/flutter_rust_bridge.git", features = [] }
 once_cell           = "*"
 parking_lot         = "0.12.1"
 phf                 = { version = "*", features = ["macros"] }
