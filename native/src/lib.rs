@@ -1,3 +1,7 @@
+mod bridge_generated_shares; /* AUTO INJECTED BY flutter_rust_bridge. This line may not be accurate, and you can change it according to your needs. */
+mod gened_rule_api; /* AUTO INJECTED BY flutter_rust_bridge. This line may not be accurate, and you can change it according to your needs. */
+mod gened_ucci_api; /* AUTO INJECTED BY flutter_rust_bridge. This line may not be accurate, and you can change it according to your needs. */
+mod gened_util_api; /* AUTO INJECTED BY flutter_rust_bridge. This line may not be accurate, and you can change it according to your needs. */
 use std::sync::Once;
 
 mod chess;
@@ -6,10 +10,6 @@ mod ucci;
 mod rule_api;
 mod ucci_api;
 mod util_api;
-
-mod gened_rule_api;
-mod gened_ucci_api;
-mod gened_util_api;
 
 static INIT_LOGGER_ONCE: Once = Once::new();
 fn init_logger(path: &str) {

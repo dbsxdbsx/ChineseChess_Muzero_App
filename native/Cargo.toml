@@ -1,5 +1,6 @@
 [package]
-name = "native"
+name    = "native"
+authors = ["Lao Dong"]
 version = "0.1.0"
 edition = "2021"
 
@@ -9,26 +10,26 @@ edition = "2021"
 crate-type = ["cdylib", "staticlib"]
 
 [profile.release]
-lto = true
+lto           = true
 codegen-units = 1
-strip = "debuginfo"
+strip         = "debuginfo"
 
 [profile.dev.package."*"]
 opt-level = 3
 
 [dependencies]
-anyhow = "1"
-flutter_rust_bridge = "1.38.2"
-once_cell = "*"
-parking_lot = "0.12.1"
-phf = { version = "*", features = ["macros"] }
-num-traits = "*"
-num-derive = "*"
+anyhow              = "1"
+flutter_rust_bridge = "1"
+once_cell           = "*"
+parking_lot         = "0.12.1"
+phf                 = { version = "*", features = ["macros"] }
+num-traits          = "*"
+num-derive          = "*"
 
-tokio = { version = "1", features = ["full"] }
-futures-util = "0.3"
-process-stream  = { git = "https://github.com/kkharji/process-stream"}
+tokio          = { version = "1", features = ["full"] }
+futures-util   = "0.3"
+process-stream = { git = "https://github.com/kkharji/process-stream" }
 
-log = "0.4"
-fern = { version = "0.6.0", features = ["date-based"] }
+log    = "0.4"
+fern   = { version = "0.6.0", features = ["date-based"] }
 chrono = "0.4"

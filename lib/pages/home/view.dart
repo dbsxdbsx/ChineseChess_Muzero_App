@@ -2,7 +2,7 @@
  * @Author       : 老董
  * @Date         : 2022-04-29 10:33:23
  * @LastEditors  : 老董
- * @LastEditTime : 2022-11-14 10:57:04
+ * @LastEditTime : 2022-11-21 17:30:58
  * @Description  : 软件的主界面，左侧为棋盘ui，右侧为包括但不限于棋谱列表、局势曲线等窗口的状态ui
  */
 
@@ -13,6 +13,7 @@ import 'package:dashed_rect/dashed_rect.dart';
 import 'package:docking/docking.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:macos_ui/macos_ui.dart';
@@ -103,7 +104,8 @@ class HomeView extends GetView<HomeController> {
                   context,
                   "提示",
                   "是否退出程序？",
-                  onYesPressed: () => exit(0),
+                  onYesPressed: () async => await SystemChannels.platform
+                      .invokeMethod('SystemNavigator.pop'),
                 );
                 break;
               default:
@@ -149,8 +151,8 @@ class HomeView extends GetView<HomeController> {
     //       // DockingItem(name: '思考细节', widget: const Text("")),
     //     ]),
     //     // uy
-        // DockingRow([c])
-      // ]),
+    // DockingRow([c])
+    // ]),
     // );
     // DockingLayout layout = DockingLayout(
     //     root: DockingTabs([
@@ -198,7 +200,10 @@ class HomeView extends GetView<HomeController> {
       child: Container(
         color: backgroundStartColor,
         child: Column(
-          children: [redPanel, blackPanel, /* dockTabView */],
+          children: [
+            redPanel,
+            blackPanel, /* dockTabView */
+          ],
         ),
       ),
     );
