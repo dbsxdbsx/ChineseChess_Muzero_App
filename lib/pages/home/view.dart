@@ -6,11 +6,9 @@
  * @Description  : 软件的主界面，左侧为棋盘ui，右侧为包括但不限于棋谱列表、局势曲线等窗口的状态ui
  */
 
-import 'dart:io';
-
 import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
 import 'package:dashed_rect/dashed_rect.dart';
-import 'package:docking/docking.dart';
+// import 'package:docking/docking.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,7 +22,7 @@ import '../../common/widgets/ios_dialog_widget.dart';
 import 'ctrl.dart';
 import 'widgets/board_arrow.dart';
 import '../../common/widgets/float_tool.dart';
-import 'widgets/log_table.dart';
+// import 'widgets/log_table.dart';
 import 'widgets/player_ui/player_panel.dart';
 import 'widgets/setting_sheet.dart';
 
@@ -200,7 +198,7 @@ class HomeView extends GetView<HomeController> {
       child: Container(
         color: backgroundStartColor,
         child: Column(
-          children: [
+          children: const [
             redPanel,
             blackPanel, /* dockTabView */
           ],

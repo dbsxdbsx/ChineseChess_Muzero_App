@@ -207,7 +207,7 @@ class RuleApiImpl implements RuleApi {
 // Section: wire2api
 
   U8Array256 _wire2api_u8_array_256(dynamic raw) {
-    return U8Array256(_wire2api_uint_8_list(raw));
+    return U8Array256(_sharedImpl.wire2api_uint_8_list(raw));
   }
 }
 

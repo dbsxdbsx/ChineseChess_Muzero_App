@@ -168,7 +168,7 @@ dependencies = [
 [[package]]
 name = "flutter_rust_bridge"
 version = "1.75.3"
-source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#4e8afeb397645d4c1b6cc3a758c95258a2e9d9b0"
+source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#186a1363638d0ee8e5bed1b316c15c058ec623a6"
 dependencies = [
  "allo-isolate",
  "anyhow",
@@ -192,7 +192,7 @@ dependencies = [
 [[package]]
 name = "flutter_rust_bridge_macros"
 version = "1.75.3"
-source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#4e8afeb397645d4c1b6cc3a758c95258a2e9d9b0"
+source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#186a1363638d0ee8e5bed1b316c15c058ec623a6"
 
 [[package]]
 name = "futures"

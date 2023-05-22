@@ -7,6 +7,7 @@ class DigitalNumber extends StatelessWidget {
   final Color color;
 
   const DigitalNumber({
+    super.key,
     required this.value,
     required this.height,
     required this.color,

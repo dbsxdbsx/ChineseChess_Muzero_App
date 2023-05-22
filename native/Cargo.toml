@@ -18,7 +18,7 @@ strip         = "debuginfo"
 opt-level = 3
 
 [dependencies]
-anyhow              = "1"
+anyhow              = "*"
 flutter_rust_bridge = { git = "https://github.com/dbsxdbsx/flutter_rust_bridge.git", features = [] }
 once_cell           = "*"
 parking_lot         = "0.12.1"

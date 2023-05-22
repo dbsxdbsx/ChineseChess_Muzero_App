@@ -29,3 +29,8 @@ final RuleApi ruleApi = RuleApiImpl(io.Platform.isIOS || io.Platform.isMacOS
 final UcciApi ucciApi = UcciApiImpl(io.Platform.isIOS || io.Platform.isMacOS
     ? DynamicLibrary.executable()
     : DynamicLibrary.open(_dylib));
+
+final apiShare = BridgeGeneratedSharesImpl(
+    io.Platform.isIOS || io.Platform.isMacOS
+        ? DynamicLibrary.executable()
+        : DynamicLibrary.open(_dylib));
