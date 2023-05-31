@@ -2,16 +2,17 @@
  * @Author       : 老董
  * @Date         : 2022-04-29 10:33:23
  * @LastEditors  : 老董
- * @LastEditTime : 2022-11-21 17:30:58
+ * @LastEditTime : 2023-05-31 22:31:15
  * @Description  : 软件的主界面，左侧为棋盘ui，右侧为包括但不限于棋谱列表、局势曲线等窗口的状态ui
  */
+
+import 'dart:io';
 
 import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
 import 'package:dashed_rect/dashed_rect.dart';
 // import 'package:docking/docking.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:macos_ui/macos_ui.dart';
@@ -98,13 +99,10 @@ class HomeView extends GetView<HomeController> {
                 windowManager.minimize();
                 break;
               case 5: //exit app
-                showIosDialog(
-                  context,
-                  "提示",
-                  "是否退出程序？",
-                  onYesPressed: () async => await SystemChannels.platform
-                      .invokeMethod('SystemNavigator.pop'),
-                );
+                showIosDialog(context, "提示", "是否退出程序？",
+                    onYesPressed: () /* async */ {
+                  exit(0);
+                });
                 break;
               default:
                 print("pressed default");
@@ -197,8 +195,8 @@ class HomeView extends GetView<HomeController> {
     return Expanded(
       child: Container(
         color: backgroundStartColor,
-        child: Column(
-          children: const [
+        child: const Column(
+          children: [
             redPanel,
             blackPanel, /* dockTabView */
           ],

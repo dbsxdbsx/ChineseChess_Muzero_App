@@ -7,7 +7,6 @@ import 'package:window_manager/window_manager.dart';
 
 import 'common/global.dart';
 import 'common/route/route.dart';
-import '../../ffi.dart';
 
 void main() async {
   // utilApi.activate();  // TODO: not support latest frb
