@@ -178,20 +178,6 @@ class UtilApiWire implements FlutterRustBridgeWireBase {
   late final _wire_rust_release_mode =
       _wire_rust_release_modePtr.asFunction<void Function(int)>();
 
-  void wire_rust_set_up(
-    int port_,
-  ) {
-    return _wire_rust_set_up(
-      port_,
-    );
-  }
-
-  late final _wire_rust_set_upPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64)>>(
-          'wire_rust_set_up');
-  late final _wire_rust_set_up =
-      _wire_rust_set_upPtr.asFunction<void Function(int)>();
-
   void wire_activate(
     int port_,
   ) {

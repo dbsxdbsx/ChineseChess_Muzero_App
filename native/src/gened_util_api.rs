@@ -44,16 +44,6 @@ fn wire_rust_release_mode_impl(port_: MessagePort) {
         move || move |task_callback| Ok(rust_release_mode()),
     )
 }
-fn wire_rust_set_up_impl(port_: MessagePort) {
-    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
-        WrapInfo {
-            debug_name: "rust_set_up",
-            port: Some(port_),
-            mode: FfiCallMode::Normal,
-        },
-        move || move |task_callback| Ok(rust_set_up()),
-    )
-}
 fn wire_activate_impl(port_: MessagePort) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {

@@ -12,11 +12,6 @@ pub extern "C" fn wire_rust_release_mode(port_: i64) {
 }
 
 #[no_mangle]
-pub extern "C" fn wire_rust_set_up(port_: i64) {
-    wire_rust_set_up_impl(port_)
-}
-
-#[no_mangle]
 pub extern "C" fn wire_activate(port_: i64) {
     wire_activate_impl(port_)
 }

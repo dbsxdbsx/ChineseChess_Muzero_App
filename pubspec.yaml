@@ -47,9 +47,10 @@ dependencies:
   # macos_ui: ^1.7.0
   macos_ui:
     git:
-      url: https://github.com/Mayb3Nots/macos_ui.git
+      # url: https://github.com/Mayb3Nots/macos_ui.git
+      url: git@github.com:macosui/macos_ui.git
       ref: dev
-      
+
   # flutter_neumorphic: ^3.2.0
   flutter_inset_box_shadow: ^1.0.8
   # fluttertoast: ^8.0.9

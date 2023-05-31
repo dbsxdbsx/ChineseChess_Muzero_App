@@ -50,7 +50,7 @@ fn wire_write_to_process_impl(
     command: impl bridge_generated_shares::Wire2Api<String> + UnwindSafe,
     msec: impl Wire2Api<u32> + UnwindSafe,
     player: impl Wire2Api<Player> + UnwindSafe,
-    check_str_option: impl Wire2Api<Option<String>> + UnwindSafe,
+    check_str_option: impl bridge_generated_shares::Wire2Api<Option<String>> + UnwindSafe,
 ) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {

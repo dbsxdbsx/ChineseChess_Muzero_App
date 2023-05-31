@@ -29,10 +29,6 @@ abstract class UtilApi {
 
   FlutterRustBridgeTaskConstMeta get kRustReleaseModeConstMeta;
 
-  Future<void> rustSetUp({dynamic hint});
-
-  FlutterRustBridgeTaskConstMeta get kRustSetUpConstMeta;
-
   Future<void> activate({dynamic hint});
 
   FlutterRustBridgeTaskConstMeta get kActivateConstMeta;
@@ -96,22 +92,6 @@ class UtilApiImpl implements UtilApi {
   FlutterRustBridgeTaskConstMeta get kRustReleaseModeConstMeta =>
       const FlutterRustBridgeTaskConstMeta(
         debugName: "rust_release_mode",
-        argNames: [],
-      );
-
-  Future<void> rustSetUp({dynamic hint}) {
-    return _platform.executeNormal(FlutterRustBridgeTask(
-      callFfi: (port_) => _platform.inner.wire_rust_set_up(port_),
-      parseSuccessData: _sharedImpl.wire2api_unit,
-      constMeta: kRustSetUpConstMeta,
-      argValues: [],
-      hint: hint,
-    ));
-  }
-
-  FlutterRustBridgeTaskConstMeta get kRustSetUpConstMeta =>
-      const FlutterRustBridgeTaskConstMeta(
-        debugName: "rust_set_up",
         argNames: [],
       );
 

@@ -12,11 +12,6 @@ pub fn wire_rust_release_mode(port_: MessagePort) {
 }
 
 #[wasm_bindgen]
-pub fn wire_rust_set_up(port_: MessagePort) {
-    wire_rust_set_up_impl(port_)
-}
-
-#[wasm_bindgen]
 pub fn wire_activate(port_: MessagePort) {
     wire_activate_impl(port_)
 }

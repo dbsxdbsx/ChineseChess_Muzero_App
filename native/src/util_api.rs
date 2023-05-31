@@ -60,9 +60,10 @@ pub fn rust_release_mode() -> bool {
     cfg!(not(debug_assertions))
 }
 
-pub fn rust_set_up() {
-    crate::init_logger("./logs/");
-}
+// TODO: 暂时注释掉
+// pub fn rust_set_up() {
+//     crate::init_logger("./logs/");
+// }
 
 // 为激活本模块init_logger()而写的伪函数
 pub fn activate() {}
