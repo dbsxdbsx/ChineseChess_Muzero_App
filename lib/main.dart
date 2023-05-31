@@ -10,7 +10,7 @@ import 'common/route/route.dart';
 import '../../ffi.dart';
 
 void main() async {
-  utilApi.activate();
+  // utilApi.activate();  // TODO: not support latest frb
   WidgetsFlutterBinding.ensureInitialized();
 
   if (Platform.isWindows) {

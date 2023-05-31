@@ -17,10 +17,11 @@ final _dylib = io.Platform.isWindows ? '$_base.dll' : 'lib$_base.so';
 
 // The late modifier delays initializing the value until it is actually needed,
 // leaving precious little time for the program to quickly start up.
-final UtilApi utilApi = UtilApiImplExtend(
-    io.Platform.isIOS || io.Platform.isMacOS
-        ? DynamicLibrary.executable()
-        : DynamicLibrary.open(_dylib));
+// TODO: not support latest frb
+// final UtilApi utilApi = UtilApiImplExtend(
+//     io.Platform.isIOS || io.Platform.isMacOS
+//         ? DynamicLibrary.executable()
+//         : DynamicLibrary.open(_dylib));
 
 final RuleApi ruleApi = RuleApiImpl(io.Platform.isIOS || io.Platform.isMacOS
     ? DynamicLibrary.executable()

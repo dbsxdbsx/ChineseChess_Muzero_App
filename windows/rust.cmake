@@ -2,17 +2,18 @@
 # many dependencies we would need to install Corrosion on the system.
 # See instructions on https://github.com/AndrewGaspar/corrosion#cmake-install
 # Once done, uncomment this line:
-# find_package(Corrosion REQUIRED)
 
-include(FetchContent)
+# 加载本地的Corrosion
+find_package(Corrosion REQUIRED)
 
-FetchContent_Declare(
-    Corrosion
-    GIT_REPOSITORY https://github.com/AndrewGaspar/corrosion.git
-    GIT_TAG origin/master # Optionally specify a version tag or branch here
-)
-
-FetchContent_MakeAvailable(Corrosion)
+# 加载网络最新的Corrosion
+# include(FetchContent)
+# FetchContent_Declare(
+#     Corrosion
+#     GIT_REPOSITORY https://github.com/AndrewGaspar/corrosion.git
+#     GIT_TAG origin/master # Optionally specify a version tag or branch here
+# )
+# FetchContent_MakeAvailable(Corrosion)
 
 corrosion_import_crate(MANIFEST_PATH ../native/Cargo.toml)
 

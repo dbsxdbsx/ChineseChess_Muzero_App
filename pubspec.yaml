@@ -18,7 +18,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: "^3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -39,21 +39,26 @@ dependencies:
       url: git@github.com:dbsxdbsx/flutter_rust_bridge.git
       path: ./frb_dart
   freezed_annotation: ^2.0.3
-  window_manager: ^0.2.3
+  window_manager: ^0.3.4
   get: ^4.6.5
-  intl: ^0.17.0
+  intl: ^0.18.1
 
   docking: ^1.4.1+1
-  macos_ui: ^1.7.0
+  # macos_ui: ^1.7.0
+  macos_ui:
+    git:
+      url: https://github.com/Mayb3Nots/macos_ui.git
+      ref: dev
+      
   # flutter_neumorphic: ^3.2.0
   flutter_inset_box_shadow: ^1.0.8
   # fluttertoast: ^8.0.9
   # oktoast: ^3.2.0
   overlay_support: ^2.0.1
   dashed_rect: ^0.0.4
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.6
   file_picker: ^5.0.1
-  pausable_timer: ^1.0.0+5
+  pausable_timer: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +69,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  ffigen: ^6.1.2
+  ffigen: ^8.0.2
   flutter_lints: ^2.0.1
   build_runner: ^2.1.11
   freezed: ^2.0.3+1
