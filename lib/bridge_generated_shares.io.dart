@@ -159,20 +159,6 @@ class BridgeGeneratedSharesWire implements FlutterRustBridgeWireBase {
           'free_WireSyncReturn');
   late final _free_WireSyncReturn =
       _free_WireSyncReturnPtr.asFunction<void Function(WireSyncReturn)>();
-
-  void wire_rust_set_up(
-    int port_,
-  ) {
-    return _wire_rust_set_up(
-      port_,
-    );
-  }
-
-  late final _wire_rust_set_upPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64)>>(
-          'wire_rust_set_up');
-  late final _wire_rust_set_up =
-      _wire_rust_set_upPtr.asFunction<void Function(int)>();
 }
 
 final class _Dart_Handle extends ffi.Opaque {}
