@@ -19,9 +19,8 @@ gen:
         "RuleApi" \
         "UcciApi" \
         "UtilApi" \
+        --dart-decl-output lib/bridge_definitions.dart \
         --wasm \
-
-    # --dart-decl-output lib/bridge_definitions.dart \
 
     #
     # --inline-rust \

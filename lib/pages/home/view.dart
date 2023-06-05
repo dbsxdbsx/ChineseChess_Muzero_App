@@ -2,13 +2,13 @@
  * @Author       : 老董
  * @Date         : 2022-04-29 10:33:23
  * @LastEditors  : 老董
- * @LastEditTime : 2023-05-31 22:31:15
+ * @LastEditTime : 2023-06-05 12:27:06
  * @Description  : 软件的主界面，左侧为棋盘ui，右侧为包括但不限于棋谱列表、局势曲线等窗口的状态ui
  */
 
 import 'dart:io';
 
-import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
+import 'package:chinese_chess_alpha_zero/bridge_definitions.dart';
 import 'package:dashed_rect/dashed_rect.dart';
 // import 'package:docking/docking.dart';
 import 'package:flutter/cupertino.dart';

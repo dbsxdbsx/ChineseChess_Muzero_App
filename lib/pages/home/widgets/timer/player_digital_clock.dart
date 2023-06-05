@@ -1,4 +1,4 @@
-import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
+import 'package:chinese_chess_alpha_zero/bridge_definitions.dart';
 import 'package:flutter/material.dart';
 
 import '../../lib.dart';

@@ -1,7 +1,7 @@
 import 'dart:math';
 
+import 'package:chinese_chess_alpha_zero/bridge_definitions.dart';
 import 'package:chinese_chess_alpha_zero/common/global.dart';
-import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
 import 'package:flutter/material.dart';
 
 class ArrowPainter extends CustomPainter {

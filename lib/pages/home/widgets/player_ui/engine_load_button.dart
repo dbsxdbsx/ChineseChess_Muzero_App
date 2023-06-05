@@ -2,12 +2,12 @@
  * @Author       : 老董
  * @Date         : 2022-07-21 09:49:11
  * @LastEditors  : 老董
- * @LastEditTime : 2022-11-10 09:50:09
+ * @LastEditTime : 2023-06-05 12:27:30
  * @Description  : player panel中那个“电脑图标”的按钮，用以加载引擎
  */
+import 'package:chinese_chess_alpha_zero/bridge_definitions.dart';
 import 'package:chinese_chess_alpha_zero/common/global.dart';
 import 'package:chinese_chess_alpha_zero/common/widgets/toast/toast_message.dart';
-import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';

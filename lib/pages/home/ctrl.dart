@@ -2,17 +2,16 @@
  * @Author       : 老董
  * @Date         : 2022-04-29 10:49:11
  * @LastEditors  : 老董
- * @LastEditTime : 2022-12-07 17:10:37
+ * @LastEditTime : 2023-06-05 12:26:55
  * @Description  : 用以控制HomeView的control组件
  */
 
 import 'dart:async';
 
-import 'package:chinese_chess_alpha_zero/gened_ucci_api.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pausable_timer/pausable_timer.dart';
+import '../../bridge_definitions.dart';
 import '../../common/global.dart';
 import '../../common/widgets/toast/toast_message.dart';
 import '../../ffi.dart';

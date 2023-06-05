@@ -2,14 +2,14 @@
  * @Author       : 老董
  * @Date         : 2022-04-29 22:27:48
  * @LastEditors  : 老董
- * @LastEditTime : 2022-11-04 13:51:01
+ * @LastEditTime : 2023-06-05 12:26:33
  * @Description  : 全局属性
  */
 import 'dart:ui';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
-import '../gened_ucci_api.dart';
+import '../bridge_definitions.dart';
 
 // 一些默认参数
 const skinPath = "./assets/skins/";
