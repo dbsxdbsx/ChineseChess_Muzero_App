@@ -16,6 +16,11 @@ pub extern "C" fn wire_activate(port_: i64) {
     wire_activate_impl(port_)
 }
 
+#[no_mangle]
+pub extern "C" fn wire_to_string__method__Player(port_: i64, that: i32) {
+    wire_to_string__method__Player_impl(port_, that)
+}
+
 // Section: allocate functions
 
 // Section: related functions

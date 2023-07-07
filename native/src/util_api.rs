@@ -54,6 +54,15 @@ pub enum Player {
     Black,
 }
 
+impl Player {
+    pub fn to_string(&self) -> String {
+        match self {
+            Player::Red => "red".to_string(),
+            Player::Black => "black".to_string(),
+        }
+    }
+}
+
 // The convention for Rust identifiers is the snake_case,
 // and they are automatically converted to camelCase on the Dart side.
 pub fn rust_release_mode() -> bool {
