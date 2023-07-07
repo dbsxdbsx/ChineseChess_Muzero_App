@@ -339,5 +339,7 @@ String getPlayerIconImagePath(Player player) {
     // black
     case Player.Black:
       return "${playerIconPath}bk.svg";
+    default:
+      throw Exception('Player is not Red or Black, Something went wrong!');
   }
 }

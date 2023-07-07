@@ -67,6 +67,8 @@ class ArrowPainter extends CustomPainter {
         case Player.Black:
           pointPaint.color = Colors.black.withOpacity(_opacity);
           break;
+        default:
+          throw Exception('Player is not Red or Black, Something went wrong!');
       }
       // 绘制形状的必要参数
       final offsets = getAbsOffsetFromChessPos(eachMove);

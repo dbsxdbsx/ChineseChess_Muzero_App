@@ -2,7 +2,7 @@
  * @Author       : 老董
  * @Date         : 2022-04-29 10:49:11
  * @LastEditors  : 老董
- * @LastEditTime : 2023-06-05 12:26:55
+ * @LastEditTime : 2023-07-07 13:48:25
  * @Description  : 用以控制HomeView的control组件
  */
 
@@ -277,6 +277,8 @@ class HomeController extends GetxController {
         _redTimeController.value.runTimer();
         _player = Player.Red;
         break;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 
@@ -371,6 +373,8 @@ class HomeController extends GetxController {
       case Player.Black:
         await ruleApi.updatePlayerData(player: 'b');
         break;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 
@@ -531,6 +535,8 @@ class HomeController extends GetxController {
         return _isRedEngineLoaded.value;
       case Player.Black:
         return _isBlackEngineLoaded.value;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 
@@ -542,6 +548,8 @@ class HomeController extends GetxController {
       case Player.Black:
         _isBlackEngineLoaded.value = LoadedOrNot;
         break;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 
@@ -567,6 +575,8 @@ class HomeController extends GetxController {
         return _redEngineName.isEmpty ? "(人类)" : _redEngineName.value;
       case Player.Black:
         return _blackEngineName.isEmpty ? "(人类)" : _blackEngineName.value;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 
@@ -582,6 +592,8 @@ class HomeController extends GetxController {
       case Player.Black:
         _blackEngineName.value = tmpName;
         break;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 }

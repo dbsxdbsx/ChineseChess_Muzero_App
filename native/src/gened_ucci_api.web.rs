@@ -51,6 +51,11 @@ impl Wire2Api<Option<String>> for JsValue {
         (!self.is_undefined() && !self.is_null()).then(|| self.wire2api())
     }
 }
+impl Wire2Api<Player> for JsValue {
+    fn wire2api(self) -> Player {
+        (self.unchecked_into_f64() as i32).wire2api()
+    }
+}
 impl Wire2Api<u32> for JsValue {
     fn wire2api(self) -> u32 {
         self.unchecked_into_f64() as _

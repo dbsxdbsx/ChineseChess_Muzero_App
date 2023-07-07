@@ -25,24 +25,6 @@ class BridgeGeneratedSharesImpl implements BridgeGeneratedShares {
   factory BridgeGeneratedSharesImpl.wasm(FutureOr<WasmModule> module) =>
       BridgeGeneratedSharesImpl(module as ExternalLibrary);
 
-  Future<String> toStringMethodPlayer({required Player that, dynamic hint}) {
-    var arg0 = api2wire_player(that);
-    return _platform.executeNormal(FlutterRustBridgeTask(
-      callFfi: (port_) =>
-          _platform.inner.wire_to_string__method__Player(port_, arg0),
-      parseSuccessData: wire2api_String,
-      constMeta: kToStringMethodPlayerConstMeta,
-      argValues: [that],
-      hint: hint,
-    ));
-  }
-
-  FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta =>
-      const FlutterRustBridgeTaskConstMeta(
-        debugName: "to_string__method__Player",
-        argNames: ["that"],
-      );
-
   void dispose() {
     _platform.dispose();
   }
@@ -78,11 +60,6 @@ class BridgeGeneratedSharesImpl implements BridgeGeneratedShares {
 @protected
 int api2wire_i32(int raw) {
   return raw;
-}
-
-@protected
-int api2wire_player(Player raw) {
-  return api2wire_i32(raw.index);
 }
 
 @protected

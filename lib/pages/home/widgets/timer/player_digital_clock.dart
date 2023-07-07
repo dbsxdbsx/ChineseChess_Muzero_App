@@ -24,6 +24,8 @@ class PlayerDigitalClock extends GetView<HomeController> {
       case Player.Black:
         _timeController = controller.blackTimeController;
         break;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 

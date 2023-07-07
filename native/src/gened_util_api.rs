@@ -54,22 +54,6 @@ fn wire_activate_impl(port_: MessagePort) {
         move || move |task_callback| Ok(activate()),
     )
 }
-fn wire_to_string__method__Player_impl(
-    port_: MessagePort,
-    that: impl bridge_generated_shares::Wire2Api<Player> + UnwindSafe,
-) {
-    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
-        WrapInfo {
-            debug_name: "to_string__method__Player",
-            port: Some(port_),
-            mode: FfiCallMode::Normal,
-        },
-        move || {
-            let api_that = that.wire2api();
-            move |task_callback| Ok(Player::to_string(&api_that))
-        },
-    )
-}
 // Section: wrapper structs
 
 // Section: static checks

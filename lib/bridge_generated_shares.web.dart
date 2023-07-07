@@ -46,8 +46,6 @@ class BridgeGeneratedSharesWasmModule implements WasmModule {
   external Object /* Promise */ call([String? moduleName]);
   external BridgeGeneratedSharesWasmModule bind(
       dynamic thisArg, String moduleName);
-  external dynamic /* void */ wire_to_string__method__Player(
-      NativePortType port_, int that);
 }
 
 // Section: WASM wire connector
@@ -56,7 +54,4 @@ class BridgeGeneratedSharesWire
     extends FlutterRustBridgeWasmWireBase<BridgeGeneratedSharesWasmModule> {
   BridgeGeneratedSharesWire(FutureOr<WasmModule> module)
       : super(WasmModule.cast<BridgeGeneratedSharesWasmModule>(module));
-
-  void wire_to_string__method__Player(NativePortType port_, int that) =>
-      wasmModule.wire_to_string__method__Player(port_, that);
 }

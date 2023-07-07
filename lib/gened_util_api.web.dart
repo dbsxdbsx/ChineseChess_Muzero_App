@@ -42,12 +42,6 @@ class UtilApiWasmModule implements WasmModule {
   external dynamic /* void */ wire_rust_release_mode(NativePortType port_);
 
   external dynamic /* void */ wire_activate(NativePortType port_);
-
-  external dynamic /* void */ wire_to_string__method__Player(
-      NativePortType port_, int that);
-
-  external dynamic /* void */ wire_to_string__method__Player(
-      NativePortType port_, int that);
 }
 
 // Section: WASM wire connector
@@ -62,10 +56,4 @@ class UtilApiWire extends FlutterRustBridgeWasmWireBase<UtilApiWasmModule> {
       wasmModule.wire_rust_release_mode(port_);
 
   void wire_activate(NativePortType port_) => wasmModule.wire_activate(port_);
-
-  void wire_to_string__method__Player(NativePortType port_, int that) =>
-      wasmModule.wire_to_string__method__Player(port_, that);
-
-  // void wire_to_string__method__Player(NativePortType port_, int that) =>
-  //     wasmModule.wire_to_string__method__Player(port_, that);
 }

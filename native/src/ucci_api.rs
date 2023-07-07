@@ -9,12 +9,13 @@ use log::{debug, error, info, warn};
 use process_stream::{Process, ProcessExt};
 use tokio::io::AsyncWriteExt;
 
+use crate::chess::Player;
+// use crate::chess::MySharedStruct;
 use crate::ucci::{
     get_cloned_listener, get_engine_path, get_flag_lock, set_engine_name, set_engine_path,
     set_flag_lock, set_listener, set_process_loaded, BLACK_ENGINE_NAME, BLACK_PROCESS_LOADED,
     COMMAND, FEEDBACK, RED_ENGINE_NAME, RED_PROCESS_LOADED,
 };
-use crate::util_api::Player;
 
 // refer:https://github.com/fzyzcjy/flutter_rust_bridge/issues/517
 // refer:http://cjycode.com/flutter_rust_bridge/feature/stream.html
@@ -169,6 +170,7 @@ pub fn is_process_loaded(msec: u32, player: Player) -> bool {
                     return true;
                 }
             }
+            Player::Unknown => panic!(),
         }
 
         thread::sleep(sleep_msec);
@@ -191,6 +193,7 @@ pub fn is_process_unloaded(msec: u32, player: Player) -> bool {
                     return true;
                 }
             }
+            Player::Unknown => panic!(),
         }
         thread::sleep(sleep_msec);
     }
@@ -246,5 +249,11 @@ pub fn get_engine_name(player: Player) -> String {
                 engine_name
             }
         }
+        Player::Unknown => panic!(),
     }
 }
+
+// TODO: error with customized struct?
+// pub fn test_shared_method_with_custom_struct_in_ucci_api(s: MySharedStruct) -> String {
+//     s.test_shared_method()
+// }

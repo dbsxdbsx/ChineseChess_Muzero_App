@@ -48,26 +48,16 @@ pub fn platform() -> Platform {
     }
 }
 
-#[derive(Debug, Copy, Clone)]
-pub enum Player {
-    Red,
-    Black,
-}
-
-impl Player {
-    pub fn to_string(&self) -> String {
-        match self {
-            Player::Red => "red".to_string(),
-            Player::Black => "black".to_string(),
-        }
-    }
-}
-
 // The convention for Rust identifiers is the snake_case,
 // and they are automatically converted to camelCase on the Dart side.
 pub fn rust_release_mode() -> bool {
     cfg!(not(debug_assertions))
 }
+
+// TODO: error with customized struct?
+// pub fn test_shared_method_with_custom_struct_in_util_api(s: MySharedStruct) -> String {
+// s.test_shared_method()
+// }
 
 // TODO: 暂时注释掉
 // pub fn rust_set_up() {

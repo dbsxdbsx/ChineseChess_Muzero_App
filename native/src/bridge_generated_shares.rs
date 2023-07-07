@@ -16,26 +16,8 @@ use flutter_rust_bridge::*;
 
 // Section: imports
 
-pub use crate::util_api::Player;
-
 // Section: wire functions
 
-fn wire_to_string__method__Player_impl(
-    port_: MessagePort,
-    that: impl Wire2Api<Player> + UnwindSafe,
-) {
-    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
-        WrapInfo {
-            debug_name: "to_string__method__Player",
-            port: Some(port_),
-            mode: FfiCallMode::Normal,
-        },
-        move || {
-            let api_that = that.wire2api();
-            move |task_callback| Ok(Player::to_string(&api_that))
-        },
-    )
-}
 // Section: wrapper structs
 
 // Section: static checks
@@ -62,15 +44,6 @@ where
 impl Wire2Api<i32> for i32 {
     fn wire2api(self) -> i32 {
         self
-    }
-}
-impl Wire2Api<Player> for i32 {
-    fn wire2api(self) -> Player {
-        match self {
-            0 => Player::Red,
-            1 => Player::Black,
-            _ => unreachable!("Invalid variant for Player: {}", self),
-        }
     }
 }
 impl Wire2Api<u8> for u8 {

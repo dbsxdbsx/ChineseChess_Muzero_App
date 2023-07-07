@@ -56,9 +56,6 @@ class UcciApiWasmModule implements WasmModule {
 
   external dynamic /* void */ wire_get_engine_name(
       NativePortType port_, int player);
-
-  external dynamic /* void */ wire_to_string__method__Player(
-      NativePortType port_, int that);
 }
 
 // Section: WASM wire connector
@@ -84,7 +81,4 @@ class UcciApiWire extends FlutterRustBridgeWasmWireBase<UcciApiWasmModule> {
 
   void wire_get_engine_name(NativePortType port_, int player) =>
       wasmModule.wire_get_engine_name(port_, player);
-
-  void wire_to_string__method__Player(NativePortType port_, int that) =>
-      wasmModule.wire_to_string__method__Player(port_, that);
 }

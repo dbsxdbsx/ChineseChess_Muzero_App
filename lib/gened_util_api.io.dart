@@ -52,22 +52,6 @@ class UtilApiWire implements FlutterRustBridgeWireBase {
           lookup)
       : _lookup = lookup;
 
-  void wire_to_string__method__Player(
-    int port_,
-    int that,
-  ) {
-    return _wire_to_string__method__Player(
-      port_,
-      that,
-    );
-  }
-
-  late final _wire_to_string__method__PlayerPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64, ffi.Int32)>>(
-          'wire_to_string__method__Player');
-  late final _wire_to_string__method__Player =
-      _wire_to_string__method__PlayerPtr.asFunction<void Function(int, int)>();
-
   ffi.Pointer<wire_uint_8_list> new_uint_8_list(
     int len,
   ) {
@@ -96,6 +80,25 @@ class UtilApiWire implements FlutterRustBridgeWireBase {
           'free_WireSyncReturn');
   late final _free_WireSyncReturn =
       _free_WireSyncReturnPtr.asFunction<void Function(WireSyncReturn)>();
+
+  void wire_test_shared_method_with_custom_struct_in_ucci_api(
+    int port_,
+    ffi.Pointer<ffi.Int> s,
+  ) {
+    return _wire_test_shared_method_with_custom_struct_in_ucci_api(
+      port_,
+      s,
+    );
+  }
+
+  late final _wire_test_shared_method_with_custom_struct_in_ucci_apiPtr =
+      _lookup<
+              ffi.NativeFunction<
+                  ffi.Void Function(ffi.Int64, ffi.Pointer<ffi.Int>)>>(
+          'wire_test_shared_method_with_custom_struct_in_ucci_api');
+  late final _wire_test_shared_method_with_custom_struct_in_ucci_api =
+      _wire_test_shared_method_with_custom_struct_in_ucci_apiPtr
+          .asFunction<void Function(int, ffi.Pointer<ffi.Int>)>();
 
   void store_dart_post_cobject(
     DartPostCObjectFnType ptr,
@@ -211,6 +214,13 @@ class UtilApiWire implements FlutterRustBridgeWireBase {
 }
 
 final class _Dart_Handle extends ffi.Opaque {}
+
+final class wire_uint_8_list extends ffi.Struct {
+  external ffi.Pointer<ffi.Uint8> ptr;
+
+  @ffi.Int32()
+  external int len;
+}
 
 typedef DartPostCObjectFnType = ffi.Pointer<
     ffi.NativeFunction<

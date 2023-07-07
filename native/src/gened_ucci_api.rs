@@ -21,12 +21,13 @@ use std::sync::Arc;
 
 use crate::bridge_generated_shares;
 use crate::bridge_generated_shares::*;
+use crate::chess::Player;
 
 // Section: wire functions
 
 fn wire_subscribe_ucci_engine_impl(
     port_: MessagePort,
-    player: impl bridge_generated_shares::Wire2Api<Player> + UnwindSafe,
+    player: impl Wire2Api<Player> + UnwindSafe,
     engine_path: impl bridge_generated_shares::Wire2Api<String> + UnwindSafe,
 ) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
@@ -48,7 +49,7 @@ fn wire_write_to_process_impl(
     port_: MessagePort,
     command: impl bridge_generated_shares::Wire2Api<String> + UnwindSafe,
     msec: impl Wire2Api<u32> + UnwindSafe,
-    player: impl bridge_generated_shares::Wire2Api<Player> + UnwindSafe,
+    player: impl Wire2Api<Player> + UnwindSafe,
     check_str_option: impl bridge_generated_shares::Wire2Api<Option<String>> + UnwindSafe,
 ) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
@@ -76,7 +77,7 @@ fn wire_write_to_process_impl(
 fn wire_is_process_loaded_impl(
     port_: MessagePort,
     msec: impl Wire2Api<u32> + UnwindSafe,
-    player: impl bridge_generated_shares::Wire2Api<Player> + UnwindSafe,
+    player: impl Wire2Api<Player> + UnwindSafe,
 ) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
@@ -94,7 +95,7 @@ fn wire_is_process_loaded_impl(
 fn wire_is_process_unloaded_impl(
     port_: MessagePort,
     msec: impl Wire2Api<u32> + UnwindSafe,
-    player: impl bridge_generated_shares::Wire2Api<Player> + UnwindSafe,
+    player: impl Wire2Api<Player> + UnwindSafe,
 ) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
@@ -109,10 +110,7 @@ fn wire_is_process_unloaded_impl(
         },
     )
 }
-fn wire_get_engine_name_impl(
-    port_: MessagePort,
-    player: impl bridge_generated_shares::Wire2Api<Player> + UnwindSafe,
-) {
+fn wire_get_engine_name_impl(port_: MessagePort, player: impl Wire2Api<Player> + UnwindSafe) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
             debug_name: "get_engine_name",
@@ -148,6 +146,16 @@ where
     }
 }
 
+impl Wire2Api<Player> for i32 {
+    fn wire2api(self) -> Player {
+        match self {
+            0 => Player::Red,
+            1 => Player::Black,
+            2 => Player::Unknown,
+            _ => unreachable!("Invalid variant for Player: {}", self),
+        }
+    }
+}
 impl Wire2Api<u32> for u32 {
     fn wire2api(self) -> u32 {
         self

@@ -81,42 +81,6 @@ class UtilApiImpl implements UtilApi {
         argNames: [],
       );
 
-  Future<String> toStringMethodPlayer({required Player that, dynamic hint}) {
-    var arg0 = api2wire_player(that);
-    return _platform.executeNormal(FlutterRustBridgeTask(
-      callFfi: (port_) =>
-          _platform.inner.wire_to_string__method__Player(port_, arg0),
-      parseSuccessData: _sharedImpl.wire2api_String,
-      constMeta: kToStringMethodPlayerConstMeta,
-      argValues: [that],
-      hint: hint,
-    ));
-  }
-
-  FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta =>
-      const FlutterRustBridgeTaskConstMeta(
-        debugName: "to_string__method__Player",
-        argNames: ["that"],
-      );
-
-  // Future<String> toStringMethodPlayer({required Player that, dynamic hint}) {
-  //   var arg0 = api2wire_player(that);
-  //   return _platform.executeNormal(FlutterRustBridgeTask(
-  //     callFfi: (port_) =>
-  //         _platform.inner.wire_to_string__method__Player(port_, arg0),
-  //     parseSuccessData: _sharedImpl.wire2api_String,
-  //     constMeta: kToStringMethodPlayerConstMeta,
-  //     argValues: [that],
-  //     hint: hint,
-  //   ));
-  // }
-
-  // FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta =>
-  //     const FlutterRustBridgeTaskConstMeta(
-  //       debugName: "to_string__method__Player",
-  //       argNames: ["that"],
-  //     );
-
   void dispose() {
     _platform.dispose();
   }

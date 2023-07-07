@@ -2,7 +2,7 @@
  * @Author       : 老董
  * @Date         : 2022-07-21 09:49:11
  * @LastEditors  : 老董
- * @LastEditTime : 2023-06-05 12:27:30
+ * @LastEditTime : 2023-07-07 13:54:52
  * @Description  : player panel中那个“电脑图标”的按钮，用以加载引擎
  */
 import 'package:chinese_chess_alpha_zero/bridge_definitions.dart';
@@ -50,6 +50,8 @@ class EngineLoadButton extends GetView<HomeController> {
       case Player.Black:
         _iconColor = Colors.black;
         break;
+      default:
+        throw Exception('Player is not Red or Black, Something went wrong!');
     }
   }
 

@@ -16,16 +16,7 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge.dart';
 import 'package:meta/meta.dart';
 import 'package:uuid/uuid.dart';
 
-abstract class BridgeGeneratedShares {
-  Future<String> toStringMethodPlayer({required Player that, dynamic hint});
-
-  FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta;
-}
-
-enum Player {
-  Red,
-  Black,
-}
+abstract class BridgeGeneratedShares {}
 
 abstract class UtilApi {
   Future<Platform> platform({dynamic hint});
@@ -39,14 +30,6 @@ abstract class UtilApi {
   Future<void> activate({dynamic hint});
 
   FlutterRustBridgeTaskConstMeta get kActivateConstMeta;
-
-  Future<String> toStringMethodPlayer({required Player that, dynamic hint});
-
-  FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta;
-
-  Future<String> toStringMethodPlayer({required Player that, dynamic hint});
-
-  FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta;
 }
 
 enum Platform {
@@ -88,10 +71,12 @@ abstract class UcciApi {
   Future<String> getEngineName({required Player player, dynamic hint});
 
   FlutterRustBridgeTaskConstMeta get kGetEngineNameConstMeta;
+}
 
-  Future<String> toStringMethodPlayer({required Player that, dynamic hint});
-
-  FlutterRustBridgeTaskConstMeta get kToStringMethodPlayerConstMeta;
+enum Player {
+  Red,
+  Black,
+  Unknown,
 }
 
 abstract class RuleApi {

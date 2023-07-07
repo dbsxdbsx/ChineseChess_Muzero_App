@@ -132,22 +132,6 @@ class BridgeGeneratedSharesWire implements FlutterRustBridgeWireBase {
   late final _init_frb_dart_api_dl = _init_frb_dart_api_dlPtr
       .asFunction<int Function(ffi.Pointer<ffi.Void>)>();
 
-  void wire_to_string__method__Player(
-    int port_,
-    int that,
-  ) {
-    return _wire_to_string__method__Player(
-      port_,
-      that,
-    );
-  }
-
-  late final _wire_to_string__method__PlayerPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64, ffi.Int32)>>(
-          'wire_to_string__method__Player');
-  late final _wire_to_string__method__Player =
-      _wire_to_string__method__PlayerPtr.asFunction<void Function(int, int)>();
-
   ffi.Pointer<wire_uint_8_list> new_uint_8_list(
     int len,
   ) {
@@ -176,6 +160,44 @@ class BridgeGeneratedSharesWire implements FlutterRustBridgeWireBase {
           'free_WireSyncReturn');
   late final _free_WireSyncReturn =
       _free_WireSyncReturnPtr.asFunction<void Function(WireSyncReturn)>();
+
+  void wire_test_shared_method_with_custom_struct_in_ucci_api(
+    int port_,
+    ffi.Pointer<ffi.Int> s,
+  ) {
+    return _wire_test_shared_method_with_custom_struct_in_ucci_api(
+      port_,
+      s,
+    );
+  }
+
+  late final _wire_test_shared_method_with_custom_struct_in_ucci_apiPtr =
+      _lookup<
+              ffi.NativeFunction<
+                  ffi.Void Function(ffi.Int64, ffi.Pointer<ffi.Int>)>>(
+          'wire_test_shared_method_with_custom_struct_in_ucci_api');
+  late final _wire_test_shared_method_with_custom_struct_in_ucci_api =
+      _wire_test_shared_method_with_custom_struct_in_ucci_apiPtr
+          .asFunction<void Function(int, ffi.Pointer<ffi.Int>)>();
+
+  void wire_test_shared_method_with_custom_struct_in_util_api(
+    int port_,
+    ffi.Pointer<ffi.Int> s,
+  ) {
+    return _wire_test_shared_method_with_custom_struct_in_util_api(
+      port_,
+      s,
+    );
+  }
+
+  late final _wire_test_shared_method_with_custom_struct_in_util_apiPtr =
+      _lookup<
+              ffi.NativeFunction<
+                  ffi.Void Function(ffi.Int64, ffi.Pointer<ffi.Int>)>>(
+          'wire_test_shared_method_with_custom_struct_in_util_api');
+  late final _wire_test_shared_method_with_custom_struct_in_util_api =
+      _wire_test_shared_method_with_custom_struct_in_util_apiPtr
+          .asFunction<void Function(int, ffi.Pointer<ffi.Int>)>();
 }
 
 final class _Dart_Handle extends ffi.Opaque {}

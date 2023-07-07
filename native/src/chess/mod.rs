@@ -4,6 +4,17 @@ use once_cell::sync::Lazy;
 use std::ops::Deref;
 use std::sync::Mutex;
 
+// #[derive(Debug, Copy, Clone)]
+// pub struct MySharedStruct {
+//     pub name: i32,
+// }
+
+// impl MySharedStruct {
+//     pub fn test_shared_method(&self) -> String {
+//         return "h".into();
+//     }
+// }
+
 pub static BOARD_ARRAY: Lazy<Mutex<[u8; 256]>> = Lazy::new(|| Mutex::new([0; 256]));
 pub static PLAYER: Lazy<Mutex<Player>> = Lazy::new(|| Mutex::new(Player::Unknown));
 
@@ -383,6 +394,15 @@ pub enum Player {
     Red,
     Black,
     Unknown,
+}
+impl Player {
+    pub fn to_string(&self) -> String {
+        match self {
+            Player::Red => "red".to_string(),
+            Player::Black => "black".to_string(),
+            Player::Unknown => "unknown".to_string(),
+        }
+    }
 }
 
 #[derive(PartialEq, Debug, FromPrimitive)]
