@@ -47,14 +47,4 @@ pub extern "C" fn wire_update_player_data(port_: i64, player: *mut wire_uint_8_l
 
 // Section: impl NewWithNullPtr
 
-pub trait NewWithNullPtr {
-    fn new_with_null_ptr() -> Self;
-}
-
-impl<T> NewWithNullPtr for *mut T {
-    fn new_with_null_ptr() -> Self {
-        std::ptr::null_mut()
-    }
-}
-
 // Section: sync execution mode utility
