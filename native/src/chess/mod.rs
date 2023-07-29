@@ -190,8 +190,8 @@ pub fn get_english_move_str_from_pos(src_pos: u8, dst_pos: u8) -> String {
 fn get_pos_str_from_row_col(row: u8, col: u8) -> String {
     format!(
         "{}{}",
-        COL_NUM_TO_STR_MAP[&(col as u8)],
-        ROW_NUM_TO_STR_MAP[&(row as u8)],
+        COL_NUM_TO_STR_MAP[&{ col }],
+        ROW_NUM_TO_STR_MAP[&{ row }],
     )
 }
 

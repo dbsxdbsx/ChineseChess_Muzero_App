@@ -32,7 +32,7 @@ lint:
 
 clean:
     flutter clean
-    cd native && cargo clean
+    cd native && cargo clean && cargo update
 
 serve *args='':
     flutter pub run flutter_rust_bridge:serve {{args}}
