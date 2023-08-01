@@ -4,16 +4,16 @@
 # Once done, uncomment this line:
 
 # 加载本地的Corrosion
-find_package(Corrosion REQUIRED)
+# find_package(Corrosion REQUIRED)
 
 # 加载网络最新的Corrosion
-# include(FetchContent)
-# FetchContent_Declare(
-#     Corrosion
-#     GIT_REPOSITORY https://github.com/AndrewGaspar/corrosion.git
-#     GIT_TAG origin/master # Optionally specify a version tag or branch here
-# )
-# FetchContent_MakeAvailable(Corrosion)
+include(FetchContent)
+FetchContent_Declare(
+    Corrosion
+    GIT_REPOSITORY https://github.com/AndrewGaspar/corrosion.git
+    GIT_TAG origin/master # Optionally specify a version tag or branch here
+)
+FetchContent_MakeAvailable(Corrosion)
 
 corrosion_import_crate(MANIFEST_PATH ../native/Cargo.toml)
 
