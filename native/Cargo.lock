@@ -141,9 +141,12 @@ checksum = "89b2fd2a0dcf38d7971e2194b6b6eebab45ae01067456a7fd93d5547a61b70be"
 
 [[package]]
 name = "cc"
-version = "1.0.79"
+version = "1.0.80"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "50d30906286121d95be3d479533b458f87493b30a4b5f79a607db8f5d11aa91f"
+checksum = "51f1226cd9da55587234753d1245dd5b132343ea240f26b6a9003d68706141ba"
+dependencies = [
+ "libc",
+]
 
 [[package]]
 name = "cfg-if"
@@ -203,8 +206,8 @@ dependencies = [
 
 [[package]]
 name = "flutter_rust_bridge"
-version = "1.79.0"
-source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#3d0d4354776f8c804279672c09643cce649d7ecd"
+version = "1.80.1"
+source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#4d2e62cf19d3fbdcf922cb6ec8948f9fb5bdef75"
 dependencies = [
  "allo-isolate",
  "anyhow",
@@ -227,8 +230,8 @@ dependencies = [
 
 [[package]]
 name = "flutter_rust_bridge_macros"
-version = "1.79.0"
-source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#3d0d4354776f8c804279672c09643cce649d7ecd"
+version = "1.80.1"
+source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#4d2e62cf19d3fbdcf922cb6ec8948f9fb5bdef75"
 
 [[package]]
 name = "futures"
@@ -667,9 +670,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.27"
+version = "2.0.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b60f673f44a8255b9c8c657daf66a596d435f2da81a555b06dc644d080ba45e0"
+checksum = "04361975b3f5e348b2189d8dc55bc942f278b2d482a6a0365de5bdd62d351567"
 dependencies = [
  "proc-macro2",
  "quote",
