@@ -1,5 +1,7 @@
 default: gen lint
 
+force: clean gen
+
 gen:
     flutter pub get
     flutter_rust_bridge_codegen \
