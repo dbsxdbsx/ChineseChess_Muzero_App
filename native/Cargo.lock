@@ -141,9 +141,9 @@ checksum = "89b2fd2a0dcf38d7971e2194b6b6eebab45ae01067456a7fd93d5547a61b70be"
 
 [[package]]
 name = "cc"
-version = "1.0.80"
+version = "1.0.82"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51f1226cd9da55587234753d1245dd5b132343ea240f26b6a9003d68706141ba"
+checksum = "305fe645edc1442a0fa8b6726ba61d422798d37a52e12eaecf4b022ebbb88f01"
 dependencies = [
  "libc",
 ]
@@ -207,7 +207,7 @@ dependencies = [
 [[package]]
 name = "flutter_rust_bridge"
 version = "1.80.1"
-source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#922f351b50fea2ecd4c42d39480c5f82685f854f"
+source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#0806efbe462cf82931f7374322a2875c6581031d"
 dependencies = [
  "allo-isolate",
  "anyhow",
@@ -231,7 +231,7 @@ dependencies = [
 [[package]]
 name = "flutter_rust_bridge_macros"
 version = "1.80.1"
-source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#922f351b50fea2ecd4c42d39480c5f82685f854f"
+source = "git+https://github.com/dbsxdbsx/flutter_rust_bridge.git#0806efbe462cf82931f7374322a2875c6581031d"
 
 [[package]]
 name = "futures"
@@ -551,9 +551,9 @@ dependencies = [
 
 [[package]]
 name = "pin-project-lite"
-version = "0.2.10"
+version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c40d25201921e5ff0c862a505c6557ea88568a4e3ace775ab55e93f2f4f9d57"
+checksum = "2c516611246607d0c04186886dbb3a754368ef82c79e9827a802c6d836dd111c"
 
 [[package]]
 name = "pin-utils"
