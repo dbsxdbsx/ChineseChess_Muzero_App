@@ -1,6 +1,5 @@
 default: gen lint
-
-force: clean gen
+all: clean gen lint
 
 gen:
     flutter pub get
