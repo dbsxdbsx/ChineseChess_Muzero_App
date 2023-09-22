@@ -2,7 +2,7 @@ default: gen lint
 all: clean gen lint
 
 gen:
-    flutter pub get
+    flutter pub upgrade
     flutter_rust_bridge_codegen \
         --rust-input \
         "native/src/rule_api.rs" \

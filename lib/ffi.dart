@@ -30,7 +30,7 @@ final UcciApi ucciApi = UcciApiImpl(io.Platform.isIOS || io.Platform.isMacOS
     ? DynamicLibrary.executable()
     : DynamicLibrary.open(_dylib));
 
-final apiShare = BridgeGeneratedSharesImpl(
+final apiShare = BridgeGeneratedSharedImpl(
     io.Platform.isIOS || io.Platform.isMacOS
         ? DynamicLibrary.executable()
         : DynamicLibrary.open(_dylib));

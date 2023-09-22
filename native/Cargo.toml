@@ -1,35 +1,35 @@
 [package]
-name    = "native"
-authors = ["Lao Dong"]
-version = "0.1.0"
-edition = "2021"
+    name   ="native"
+    authors=["Lao Dong"]
+    version="0.1.0"
+    edition="2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+    # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-crate-type = ["cdylib", "staticlib"]
+    crate-type=["cdylib", "staticlib"]
 
 [profile.release]
-lto           = true
-codegen-units = 1
-strip         = "debuginfo"
+    lto          =true
+    codegen-units=1
+    strip        ="debuginfo"
 
 [profile.dev.package."*"]
-opt-level = 3
+    opt-level=3
 
 [dependencies]
-anyhow              = "*"
-flutter_rust_bridge = { git = "https://github.com/dbsxdbsx/flutter_rust_bridge.git", features = [] }
-once_cell           = "*"
-parking_lot         = "0.12.1"
-phf                 = { version = "*", features = ["macros"] }
-num-traits          = "*"
-num-derive          = "*"
+    anyhow             ="*"
+    flutter_rust_bridge={git="https://github.com/dbsxdbsx/flutter_rust_bridge.git", features=[]}
+    once_cell          ="*"
+    parking_lot        ="0.12.1"
+    phf                ={version="*", features=["macros"]}
+    num-traits         ="*"
+    num-derive         ="*"
 
-tokio          = { version = "1", features = ["full"] }
-futures-util   = "0.3"
-process-stream = { git = "https://github.com/kkharji/process-stream" }
+    tokio         ={version="1", features=["full"]}
+    futures-util  ="0.3"
+    process-stream={git="https://github.com/kkharji/process-stream"}
 
-log    = "0.4"
-fern   = { version = "0.6.0", features = ["date-based"] }
-chrono = "0.4"
+    log   ="0.4"
+    fern  ={version="0.6.0", features=["date-based"]}
+    chrono="0.4"

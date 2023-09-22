@@ -437,6 +437,49 @@ enum SidePieceType {
     BlackCannon = 21,
     BlackPawn = 22,
 }
+impl SidePieceType {
+    #[allow(unused)]
+    pub fn get_chinese_name(&self) -> &str {
+        match self {
+            SidePieceType::None => "(空)",
+            SidePieceType::RedKing => "帅",
+            SidePieceType::RedAdvisor => "仕",
+            SidePieceType::RedBishop => "相",
+            SidePieceType::RedKnight => "马",
+            SidePieceType::RedRook => "车",
+            SidePieceType::RedCannon => "炮",
+            SidePieceType::RedPawn => "兵",
+            SidePieceType::BlackKing => "将",
+            SidePieceType::BlackAdvisor => "士",
+            SidePieceType::BlackBishop => "象",
+            SidePieceType::BlackKnight => "马",
+            SidePieceType::BlackRook => "车",
+            SidePieceType::BlackCannon => "炮",
+            SidePieceType::BlackPawn => "卒",
+        }
+    }
+}
+
+#[allow(unused)]
+pub fn generate_state_picture(board: [u8; 90]) -> String {
+    let mut state_picture = String::new();
+
+    for (index, &piece) in board.iter().enumerate() {
+        let piece_type = SidePieceType::from_u8(piece).unwrap_or(SidePieceType::None);
+        let chinese_name = if piece_type == SidePieceType::None {
+            "——"
+        } else {
+            piece_type.get_chinese_name()
+        };
+        state_picture.push_str(chinese_name);
+
+        if (index + 1) % 9 == 0 {
+            state_picture.push('\n');
+        }
+    }
+
+    state_picture
+}
 
 fn is_red_piece(side_piece: SidePieceType) -> bool {
     side_piece >= SidePieceType::RedKing && side_piece <= SidePieceType::RedPawn
