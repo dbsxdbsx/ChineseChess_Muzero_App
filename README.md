@@ -139,7 +139,7 @@ if (!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()) {
 
 - [中国象棋实时分析棋局——棋子识别方法分析](https://zhuanlan.zhihu.com/p/581841976)
 - [rust处理图像视频展示](https://www.bilibili.com/video/BV18A411t7Hg/?vd_source=3facc3cb195be0a27a0ea9a4eb3bb6fe)
-- [基于yolo的C#中象识别](https://github.com/Vincentzyx/VinXiangQi)
+- [**基于yolo的C#中象识别**](https://github.com/Vincentzyx/VinXiangQi)
 - [基于CNN的中象棋子识别1](https://blog.csdn.net/qq_44725872/article/details/110286528)
 - [基于CNN的中象棋子识别2](https://blog.csdn.net/Together_CZ/article/details/131084015)
 - [QT 写的象棋界面程序，图形连线天天象棋，王者象棋（未尝试过）](https://github.com/leedavid/QTggchess)
