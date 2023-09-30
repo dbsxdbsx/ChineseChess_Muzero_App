@@ -132,6 +132,9 @@ if (!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()) {
 
 ## 参考
 
+### 中国象棋ui程序、ucci引擎
+[Chinese Chess game by Flutter](https://github.com/shirne/chinese_chess)
+[中国象棋开源UCCI引擎理](https://github.com/yytdfc/ChineseChess-engines)
 ### 连线器技术
 
 - [中国象棋实时分析棋局——棋子识别方法分析](https://zhuanlan.zhihu.com/p/581841976)
