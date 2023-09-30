@@ -144,5 +144,5 @@ if (!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()) {
 - [中象简易连线器](https://github.com/liujh168/link)
 
 ### 强化学习
-
+- [中国象棋AlphaZero](https://github.com/bupticybee/icyChessZero)
 - [中国象棋gym环境](https://github.com/bupticybee/gym_chinese_chess)
