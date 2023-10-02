@@ -151,7 +151,7 @@ if (!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()) {
 - [中国象棋gym环境](https://github.com/bupticybee/gym_chinese_chess)
 
 
-### 自制引擎逻辑
+### 自制基于明确逻辑的引擎思路
 
 1.枚举出我方所有“有效”走法；---有效是指走了后不会被对方的棋子在下一回合直接吃掉我方将的走法；
 2.遍历1中的我方所有走法，针对每个走法，枚举出对方所有“有效”走法；
