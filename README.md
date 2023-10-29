@@ -150,6 +150,8 @@ if (!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()) {
 - [中国象棋AlphaZero](https://github.com/bupticybee/icyChessZero)
 - [中国象棋gym环境](https://github.com/bupticybee/gym_chinese_chess)
 
+### 定式证明
+- [尝试用数学逻辑证明某些定式](https://mathoverflow.net/questions/229732/can-one-make-high-level-proofs-about-chess-positions)
 
 ### 自制基于明确逻辑的引擎思路
 （这里的一回合是指从当前下棋一方开始的走完交替的两步棋，并不严格指代红先黑后）
